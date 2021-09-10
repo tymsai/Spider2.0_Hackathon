@@ -49,19 +49,14 @@ y.addEventListener("click", function() {
 console.log("resset");
 brightness = 100;
 z.value = 100;
-t.innerHTML = z.value + "%";
 contrast = 100;
 a.value = 100;
-o.innerHTML = a.value + "%";
 saturate = 100;
 b.value = 100;
-v3.innerHTML = b.value + "%";
 grayscale = 0;
 c.value = 0;
-v4.innerHTML = c.value + "%";
 invert = 0;
 d.value = 0;
-v5.innerHTML = d.value + "%";
 updateFilters();
 });
 
