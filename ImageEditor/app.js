@@ -68,7 +68,6 @@ updateFilters();
 //Brightness slider
 z.addEventListener("input", function() {
 console.log(z.value);
-t.innerHTML = z.value + "%";
 brightness = z.value;
 updateFilters();
 });
@@ -76,7 +75,6 @@ updateFilters();
 
 //Contrast slider
 a.addEventListener("input", function() {
-o.innerHTML = a.value + "%";
 contrast = a.value;
 updateFilters();
 });
@@ -85,7 +83,6 @@ updateFilters();
 
 //Saturation slider
 b.addEventListener("input", function() {
-v3.innerHTML = b.value + "%";
 saturate = b.value;
 updateFilters();
 });
@@ -94,14 +91,12 @@ updateFilters();
 
 //Grayscale slider
 c.addEventListener("input", function() {
-v4.innerHTML = c.value + "%";
 grayscale = c.value;
 updateFilters();
 });
 
 //Invert slider
 d.addEventListener("input", function() {
-v5.innerHTML = d.value + "%";
 invert = d.value;
 updateFilters();
 });

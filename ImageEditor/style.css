@@ -80,9 +80,7 @@ img {
     font-size: x-large;
     margin-left: 8vw;
    }
-   .val {
-    visibility: hidden;
-   }
+   
    input[type="range"] {
     -webkit-appearance: none;
     background: transparent;
