@@ -9,32 +9,23 @@ window.addEventListener('load', function() {
       }
     });
     });   
-
-
-let brightness = 100;
-let contrast = 100;
-let saturate = 100;
-let grayscale = 0;
-let invert = 0;
-
-const imgture = document.getElementById("myimg");
-const resetAll = document.getElementById("resetAll");
-
-const slider1 = document.getElementById("slider1");
-const value1 = document.getElementById("bright");
-const slider2 = document.getElementById("slider2");
-const value2 = document.getElementById("contrast");
-const slider3 = document.getElementById("slider3");
-const value3 = document.getElementById("saturate");
-const slider4 = document.getElementById("slider4");
-const value4 = document.getElementById("gray");
-const slider5 = document.getElementById("slider5");
-const value5 = document.getElementById("invert");
+const x = document.getElementById("myimg");
+const y = document.getElementById("resetAll");
+const z = document.getElementById("slider1");
+const t = document.getElementById("bright");
+const a = document.getElementById("slider2");
+const o = document.getElementById("contrast");
+const b = document.getElementById("slider3");
+const v3 = document.getElementById("saturate");
+const c = document.getElementById("slider4");
+const v4 = document.getElementById("gray");
+const d = document.getElementById("slider5");
+const v5 = document.getElementById("invert");
 
 
 //Update filters
 function updateFilters() {
-imgture.style.filter =
+x.style.filter =
     "brightness(" +
     brightness +
     "%) contrast(" +
@@ -47,102 +38,71 @@ imgture.style.filter =
     invert +
     "%)";
 }
+var brightness = 100;
+var contrast = 100;
+var saturate = 100;
+var grayscale = 0;
+var invert = 0;
+
 //Reset All
-resetAll.addEventListener("click", function() {
+y.addEventListener("click", function() {
 console.log("resset");
 brightness = 100;
-slider1.value = 100;
-value1.innerHTML = slider1.value + "%";
+z.value = 100;
+t.innerHTML = z.value + "%";
 contrast = 100;
-slider2.value = 100;
-value2.innerHTML = slider2.value + "%";
+a.value = 100;
+o.innerHTML = a.value + "%";
 saturate = 100;
-slider3.value = 100;
-value3.innerHTML = slider3.value + "%";
+b.value = 100;
+v3.innerHTML = b.value + "%";
 grayscale = 0;
-slider4.value = 0;
-value4.innerHTML = slider4.value + "%";
+c.value = 0;
+v4.innerHTML = c.value + "%";
 invert = 0;
-slider5.value = 0;
-value5.innerHTML = slider5.value + "%";
+d.value = 0;
+v5.innerHTML = d.value + "%";
 updateFilters();
 });
 
 //Brightness slider
-slider1.addEventListener("input", function() {
-console.log(slider1.value);
-value1.innerHTML = slider1.value + "%";
-brightness = slider1.value;
+z.addEventListener("input", function() {
+console.log(z.value);
+t.innerHTML = z.value + "%";
+brightness = z.value;
 updateFilters();
 });
 
-slider1.addEventListener("focus", function() {
-console.log("focus gotten");
-value1.style.visibility = "visible";
-});
-
-slider1.addEventListener("blur", function() {
-console.log("focus lost");
-value1.style.visibility = "hidden";
-});
 
 //Contrast slider
-slider2.addEventListener("input", function() {
-value2.innerHTML = slider2.value + "%";
-contrast = slider2.value;
+a.addEventListener("input", function() {
+o.innerHTML = a.value + "%";
+contrast = a.value;
 updateFilters();
 });
 
-slider2.addEventListener("focus", function() {
-value2.style.visibility = "visible";
-});
 
-slider2.addEventListener("blur", function() {
-value2.style.visibility = "hidden";
-});
 
 //Saturation slider
-slider3.addEventListener("input", function() {
-value3.innerHTML = slider3.value + "%";
-saturate = slider3.value;
+b.addEventListener("input", function() {
+v3.innerHTML = b.value + "%";
+saturate = b.value;
 updateFilters();
 });
 
-slider3.addEventListener("focus", function() {
-value3.style.visibility = "visible";
-});
-
-slider3.addEventListener("blur", function() {
-value3.style.visibility = "hidden";
-});
 
 
 //Grayscale slider
-slider4.addEventListener("input", function() {
-value4.innerHTML = slider4.value + "%";
-grayscale = slider4.value;
+c.addEventListener("input", function() {
+v4.innerHTML = c.value + "%";
+grayscale = c.value;
 updateFilters();
-});
-
-slider4.addEventListener("focus", function() {
-value4.style.visibility = "visible";
-});
-
-slider4.addEventListener("blur", function() {
-value4.style.visibility = "hidden";
 });
 
 //Invert slider
-slider5.addEventListener("input", function() {
-value5.innerHTML = slider5.value + "%";
-invert = slider5.value;
+d.addEventListener("input", function() {
+v5.innerHTML = d.value + "%";
+invert = d.value;
 updateFilters();
 });
 
-slider5.addEventListener("focus", function() {
-value5.style.visibility = "visible";
-});
-
-slider5.addEventListener("blur", function() {
-value5.style.visibility = "hidden";
-});
