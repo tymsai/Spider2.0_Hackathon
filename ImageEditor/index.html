@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <p class="para">Upload The Photo, <br> Edit it & Take A ScreenShot</p>
+    <input class="inputa" type='file' />
+    <div class="image">
+        <img id="myimg" src="">
+    </div>
+<div class="sliders">
+    <div class="singleSlider">
+        <div class="val" id="bright">100%</div>
+        <input class="slider" id="slider1" type="range" min="0" max="500" value="100">
+        <label for="slider1">Brightness</label>
+    </div>
+    <div class="singleSlider">
+        <div class="val" id="contrast">100%</div>
+        <input class="slider" id="slider2" type="range" min="0" max="500" value="100">
+        <label for="slider2">Contrast</label>
+    </div>
+    <div class="singleSlider">
+        <div class="val" id="saturate">100%</div>
+        <input class="slider" id="slider3" type="range" min="0" max="500" value="100">
+        <label for="slider3">Saturate</label>
+    </div>
+    <div class="singleSlider">
+        <div class="val" id="gray">0%</div>
+        <input class="slider" id="slider4" type="range" min="0" max="100" value="0">
+        <label for="slider4">Grayscale</label>
+    </div>
+    <div class="singleSlider">
+        <div class="val" id="invert">0%</div>
+        <input class="slider" id="slider5" type="range" min="0" max="100" value="0">
+        <label for="slider5">Invert</label>
+    </div>
+</div>
+</div>
+<button id="resetAll">Reset</button>
+<script src="./app.js"></script>
+</body>
+</html>
